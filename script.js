@@ -135,3 +135,42 @@ console.log("ssalary",ssalary);
 console.log("tax on salary",tax);
 netssalary=ssalary-tax;
 console.log("net-salary :",netssalary);
+
+
+// for loop
+// Zara wants to print numbers 1 to 5 with a smile 🙂
+for (let number = 1; number <= 5; number++) {
+    console.log("Zara's number: " + number + " 🙂");
+}
+
+
+//  Use of Break and Continue
+// Zara is skipping number 3 and stopping at 6 while printing 1 to 10
+for (let step = 1; step <= 10; step++) {
+    if (step === 3) {
+    console.log("Skipping 3... ❌");
+    continue;
+    }
+    
+    if (step === 6) {
+    console.log("Reached 6, stopping here! 🛑");
+    break;
+    }
+
+    console.log("Step number: " + step);
+}
+
+
+
+
+//  While Loop
+let mangoes = 1;
+
+while (mangoes <= 4) {
+    console.log("Eating mango number " + mangoes + " 🥭");
+    mangoes++;
+}
+
+console.log("No more mangoes left!");
+
+
