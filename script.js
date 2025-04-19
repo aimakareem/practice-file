@@ -136,6 +136,29 @@ console.log("tax on salary",tax);
 netssalary=ssalary-tax;
 console.log("net-salary :",netssalary);
 
+// switch statement
+{
+let eemployname = "Aima";
+let ssalary = 35000;
+let tax = 0;
+let netssalary = 0;
+
+switch (true) {
+    case (ssalary >= 25000):
+    tax = 5 / 1000 * ssalary;
+    break;
+
+default:
+    tax = 5 / 100 * ssalary;
+}
+
+console.log("eemployname:", eemployname);
+console.log("ssalary:", ssalary);
+console.log("tax on salary:", tax);
+netssalary = ssalary - tax;
+console.log("net-salary:", netssalary);
+}
+
 
 // for loop
 // Zara wants to print numbers 1 to 5 with a smile 🙂
