@@ -194,6 +194,43 @@ while (mangoes <= 4) {
     mangoes++;
 }
 
-console.log("No more mangoes left!");
+// console.log("No more mangoes left!");
+// const P =3.14;
+// P =3.14159
+// console.log(P);
 
 
+// Arrays and Objects
+// Array of student object
+let student = [
+    {nam:"Aima",marks:54},
+    {nam:"Saba",marks:76},
+    {nam:"kalsoom",marks:64},
+];
+// Step 2: Add new student using push()
+student.push({nam:"hina",marks:88});
+console.log(student);
+// step 3: Remove from end using pop
+student.pop();
+console.log(student);
+// step 4: Remove from start using shift
+student.shift();
+console.log(student);
+// step 5: Add to start using unshift
+student.unshift({nam:"ammara",marks:92});
+console.log(student);
+
+// Step 6: Filter students with marks r(student=> student.marks > 75);
+let highScorers = student.filter(student => student.marks > 75);
+console.log("High Scorers:");
+highScorers.forEach(s => console.log(s.nam));
+
+// Step 7: Calculate average marks using reduce()
+let total = student.reduce((sum, s) => sum + s.marks, 0);
+let average = total / student.length;
+console.log("Average Marks:", average);
+
+// Step 8: Use Object.keys and Object.values
+let firstStudent = student[0];
+console.log("Keys:", Object.keys(firstStudent));   
+console.log("Values:", Object.values(firstStudent));
