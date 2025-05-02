@@ -234,3 +234,16 @@ console.log("Average Marks:", average);
 let firstStudent = student[0];
 console.log("Keys:", Object.keys(firstStudent));   
 console.log("Values:", Object.values(firstStudent));
+
+
+
+
+// DOM manipulation
+window.onload = function () {
+var k = document.getElementById ("main-heading");
+var j = document.querySelector (".content");
+
+j.addEventListener("click",function(){
+    j.innerHTML ="paragraph has been changed"
+});
+};
