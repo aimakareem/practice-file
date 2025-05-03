@@ -242,8 +242,13 @@ console.log("Values:", Object.values(firstStudent));
 window.onload = function () {
 var k = document.getElementById ("main-heading");
 var j = document.querySelector (".content");
-
-j.addEventListener("click",function(){
-    j.innerHTML ="paragraph has been changed"
+// k.innerHTML = "hcbhrf"
+k.addEventListener("click",function(){
+    k.innerHTML ="paragraph has been changed"
 });
 };
+j.addEventListener("mouseover",function(){
+    j.style.backgroundColor = "orange";
+    j.style.color = "gray-600";
+})
+
