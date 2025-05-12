@@ -256,13 +256,13 @@ var j = document.querySelector (".content");
 console.log("Customer: Pizza order kiya");
 
 setTimeout(() => {
-  console.log("Chef: Pizza bana raha hoon");
+    console.log("Chef: Pizza bana raha hoon");
 
-  setTimeout(() => {
+    setTimeout(() => {
     console.log("Chef: Pizza oven mein dal diya");
 
     setTimeout(() => {
-      console.log("Chef: Pizza tayyar hai, deliver kar diya");
+        console.log("Chef: Pizza tayyar hai, deliver kar diya");
     }, 2000); // Pizza baking time
 
   }, 1000); // Oven mein dalne ka time
@@ -271,5 +271,34 @@ setTimeout(() => {
 
 console.log("Customer: Tab tak main YouTube dekh leta hoon");
 
+function fetchUser(callback) {
+    setTimeout(() => {
+    console.log("User data fetched");
+    callback({ id: 1, name: "Ali" });
+    }, 1000);
+}
+
+function fetchPosts(userId, callback) {
+    setTimeout(() => {
+    console.log(`Posts for user ${userId} fetched`);
+    callback(["post1", "post2"]);
+    }, 1000);
+}
+
+function fetchComments(post, callback) {
+    setTimeout(() => {
+    console.log(`Comments for ${post} fetched`);
+    callback(["comment1", "comment2"]);
+    }, 1000);
+}
+
+  // Callback hell 👇
+fetchUser((user) => {
+    fetchPosts(user.id, (posts) => {
+    fetchComments(posts[0], (comments) => {
+        console.log("Final Comments:", comments);
+});
+    });
+});
 
 
