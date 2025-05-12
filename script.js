@@ -239,16 +239,37 @@ console.log("Values:", Object.values(firstStudent));
 
 
 // DOM manipulation
-window.onload = function () {
+window.onload = function () {}
 var k = document.getElementById ("main-heading");
 var j = document.querySelector (".content");
 // k.innerHTML = "hcbhrf"
-k.addEventListener("click",function(){
-    k.innerHTML ="paragraph has been changed"
-});
-};
-j.addEventListener("mouseover",function(){
-    j.style.backgroundColor = "orange";
-    j.style.color = "gray-600";
-})
+// k.addEventListener("click",function(){
+//     k.innerHTML ="paragraph has been changed"
+// });
+// };
+// k.addEventListener("mouseover",function(){
+//     k.style.backgroundColor = "orange";
+//     k.style.color = "gray-600";
+// })
+
+
+console.log("Customer: Pizza order kiya");
+
+setTimeout(() => {
+  console.log("Chef: Pizza bana raha hoon");
+
+  setTimeout(() => {
+    console.log("Chef: Pizza oven mein dal diya");
+
+    setTimeout(() => {
+      console.log("Chef: Pizza tayyar hai, deliver kar diya");
+    }, 2000); // Pizza baking time
+
+  }, 1000); // Oven mein dalne ka time
+
+}, 1000); // Pizza preparation time
+
+console.log("Customer: Tab tak main YouTube dekh leta hoon");
+
+
 
