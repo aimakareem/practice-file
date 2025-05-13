@@ -302,3 +302,17 @@ fetchUser((user) => {
 });
 
 
+console.log("Start");
+
+function greeting(name, callback) {
+    console.log("Hello, " + name);
+  callback();  // Callback function will be called after greeting
+}
+
+greeting("John", function() {
+    console.log("Goodbye!");
+});
+
+console.log("End");
+
+
