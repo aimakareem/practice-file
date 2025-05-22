@@ -316,3 +316,24 @@ greeting("John", function() {
 console.log("End");
 
 
+
+// 1. Ek promise banaya
+let chaiBanana = new Promise(function(resolve, reject) {
+    let sugarAvailable = true;
+
+    if (sugarAvailable) {
+    resolve("Chai ban gayi! ☕");
+    } else {
+    reject("Chini khatam ho gayi 😓");
+    }
+});
+
+// 2. .then() aur .catch() ka use
+chaiBanana
+    .then(function(successMessage) {
+    console.log("Success:", successMessage);
+    })
+    .catch(function(errorMessage) {
+    console.log("Error:", errorMessage);
+    });
+
